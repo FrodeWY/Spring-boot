@@ -1,0 +1,10 @@
+#actuator开放所有web Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: info
