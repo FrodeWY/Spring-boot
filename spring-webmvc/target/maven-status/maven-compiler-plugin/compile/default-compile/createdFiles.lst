@@ -1,6 +1,0 @@
-com/imooc/web/config/DispatcherServletConfiguration.class
-com/imooc/web/config/WebMvcConfig.class
-com/imooc/web/controller/HelloWorldAdvice.class
-com/imooc/web/controller/HelloWorldController.class
-com/imooc/web/servlet/support/DefaultAnnotationConfigDispatcherServletInitializer.class
-com/imooc/web/config/WebMvcConfig$1.class
