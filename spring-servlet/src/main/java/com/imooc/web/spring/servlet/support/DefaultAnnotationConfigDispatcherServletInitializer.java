@@ -33,4 +33,6 @@ public class DefaultAnnotationConfigDispatcherServletInitializer extends
   protected String[] getServletMappings() {//mapping
     return new String[]{"/"};
   }
+
+
 }

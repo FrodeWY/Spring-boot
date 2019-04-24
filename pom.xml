@@ -17,7 +17,7 @@
     <module>springboot-rest</module>
     <module>spring-servlet</module>
   </modules>
-  <name>dive-in-springboot</name>
+  <name>spring-boot</name>
   <description>Demo project for Spring Boot</description>
 
 
