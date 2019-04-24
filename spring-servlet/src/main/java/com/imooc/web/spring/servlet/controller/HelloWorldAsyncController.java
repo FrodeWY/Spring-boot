@@ -38,7 +38,7 @@ public class HelloWorldAsyncController {
       println("执行计算结果,耗时:" + timeout);
       //计算结果输出
       result.setResult("Hello world");
-    } while (result != null);
+    } while (true);
   }
 
   @GetMapping("/completion-stage")
@@ -71,7 +71,7 @@ public class HelloWorldAsyncController {
     DeferredResult<String> result = new DeferredResult<>(50L);
 //    result.setResult("hello world");
 //入队操作
-    queue.offer(result);
+//    queue.offer(result);
     println("hello world");
     result.onCompletion(() -> {//onCompletion 类似于final代码块,总是会执行
 //      System.out.println("HelloWorldAsyncController complete");
