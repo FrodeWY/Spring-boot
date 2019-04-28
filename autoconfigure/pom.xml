@@ -6,6 +6,7 @@
     <artifactId>spring-boot</artifactId>
     <groupId>com.imooc</groupId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -29,6 +30,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>springboot.autoconfigure.AutoConfigureApplication</mainClass>
+        </configuration>
       </plugin>
     </plugins>
   </build>
