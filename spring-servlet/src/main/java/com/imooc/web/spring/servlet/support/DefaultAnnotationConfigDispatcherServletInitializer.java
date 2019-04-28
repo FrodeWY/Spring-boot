@@ -22,6 +22,7 @@ public class DefaultAnnotationConfigDispatcherServletInitializer extends
   @Override
 //用于定义DispatcherServlet应用上下文中的bean
   protected Class<?>[] getServletConfigClasses() {//DispatcherServlet
+    System.out.println("DefaultAnnotationConfigDispatcherServletInitializer");
     return new Class[]{
         //返回当前类作为配置类
         getClass()
