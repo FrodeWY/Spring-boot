@@ -56,7 +56,17 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
     converters.add(0, new PropertiesHttpMessageConverter());//建议放在开头
   }
 
+  /**
+   *   添加方法返回值解析器,但是优先级优先级低于内建HandlerMethodArgumentResolver
+   */
+  @Override
+  public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> handlers) {
 
+  }
+
+  /**
+   *   添加方法参数解析器,但是优先级低于内建HandlerMethodArgumentResolver
+   */
   @Override
   public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
     //添加自定义的HandlerMethodArgumentResolver,优先级低于内建HandlerMethodArgumentResolver

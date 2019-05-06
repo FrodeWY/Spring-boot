@@ -13,8 +13,7 @@ public class Java8CalculateServiceImpl implements CalculateService {
   public Integer sum(Integer... values) {
     System.out.println("java8");
     //java8 流式处理
-    Integer sum = Stream.of(values).reduce(0, Integer::sum);
 
-    return sum;
+    return Stream.of(values).reduce(0, Integer::sum);
   }
 }
