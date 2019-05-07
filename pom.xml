@@ -18,6 +18,7 @@
     <module>spring-servlet</module>
     <module>spring-boot-servlet</module>
     <module>test</module>
+    <module>spring-reactive</module>
   </modules>
   <name>spring-boot</name>
   <description>Demo project for Spring Boot</description>

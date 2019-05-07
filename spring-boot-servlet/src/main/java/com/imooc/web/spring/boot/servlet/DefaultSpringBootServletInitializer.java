@@ -6,6 +6,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 /**
  * {@link SpringBootServletInitializer}默认实现
+ *  Spring Boot 应用传统 Servlet 容器部署--> 扩展SpringBootServletInitializer
  */
 public class DefaultSpringBootServletInitializer extends SpringBootServletInitializer {
 

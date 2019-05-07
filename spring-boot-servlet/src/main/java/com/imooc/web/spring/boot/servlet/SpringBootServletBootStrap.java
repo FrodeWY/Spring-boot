@@ -6,6 +6,7 @@ import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 import javax.servlet.FilterRegistration.Dynamic;
 import javax.servlet.Servlet;
+import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletRegistration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -16,10 +17,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- * spring boot 内置容器不支持ServletContainerInitializer ，不会自动加载WebApplicationInitializer--->AbstractAnnotationConfigDispatcherServletInitializer
+ * spring boot 内置容器不支持{@link ServletContainerInitializer} ，不会自动加载{@link WebApplicationInitializer}--->{@link AbstractAnnotationConfigDispatcherServletInitializer}
  * 解决方案：ServletContextInitializer
  */
 @EnableAutoConfiguration
@@ -33,8 +36,6 @@ public class SpringBootServletBootStrap {
 
   /**
    * 也可以使用ServletRegistrationBean 注册servlet
-   *
-   *
    * @return
    */
   @Bean
