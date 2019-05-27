@@ -25,6 +25,8 @@ import org.springframework.core.env.Environment;
  * 可以在工程启动时，获取到系统环境变量和application配置文件中的变量。
  *
  * 2.要直接在自己的代码中读取spring的bean,我们除了根据常用的set外,也可以通过spring的BeanFactoryAware接口实现,只要实现setBeanFactory方法就可以
+ *
+ *
  * */
 @EnableAutoConfiguration
 public class ValueAnnotationBootstrap implements EnvironmentAware,BeanFactoryAware {
