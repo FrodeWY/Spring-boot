@@ -1,8 +1,8 @@
-package demo.code;
+package demo.bean_definition_registry_demo.code;
 
-import demo.BaseDao;
-import demo.CommentDao;
-import demo.CommentService;
+import demo.bean_definition_registry_demo.BaseDao;
+import demo.bean_definition_registry_demo.CommentDao;
+import demo.bean_definition_registry_demo.CommentService;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
 import org.springframework.beans.factory.BeanFactory;
