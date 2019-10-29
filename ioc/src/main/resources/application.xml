@@ -4,8 +4,9 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean id="commentDao" class="demo.bean_definition_registry_demo.CommentDao"/>
-  <bean id="baseDao" class="demo.bean_definition_registry_demo.BaseDao"/>
-  <bean id="commentService" class="demo.bean_definition_registry_demo.CommentService">
+  <bean id="baseDao" class="demo.bean_definition_registry_demo.BaseDao" depends-on="commentService">
+  </bean>
+  <bean id="commentService" class="demo.bean_definition_registry_demo.CommentService" depends-on="baseDao">
     <property name="baseDao" ref="baseDao"/>
     <property name="commentDao" ref="commentDao"/>
   </bean>

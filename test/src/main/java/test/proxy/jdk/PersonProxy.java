@@ -7,9 +7,9 @@ import java.lang.reflect.Proxy;
 /**
  * 定义动态代理类
  * 1.JDK的动态代理必须基于接口，CGLIB没有这个要求,JDK动态代理只能对实现了接口的类生成代理，而不能针对类
- * 2.CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法因为是继承，所以该类或方法最好不要声明成final
+ * 2.CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法因为是继承，所以该类或方法不要声明成final
  * 3. java动态代理是利用反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理。
- * 而cglib动态代理是利用asm开源包，对代理对象类的class文件加载进来，通过修改其字节码生成子类来处理。
+ * 而cglib动态代理是利用asm开源包，将代理对象类的class文件加载进来，通过修改其字节码生成子类来处理。
  */
 public class PersonProxy implements InvocationHandler {
   //业务实现类对象，用来调用具体的业务方法

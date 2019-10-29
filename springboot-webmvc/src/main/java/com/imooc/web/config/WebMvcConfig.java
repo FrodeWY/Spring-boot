@@ -1,5 +1,8 @@
 package com.imooc.web.config;
 
+import com.imooc.web.Interceptor.SyslogInterceptor;
+import com.imooc.web.Interceptor.SyslogInterceptor2;
+import com.imooc.web.Interceptor.SyslogInterceptor3;
 import java.io.File;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +27,7 @@ import org.springframework.web.servlet.view.JstlView;
  * spring mvc config
  */
 @Configuration
-//@EnableWebMvc //使用该注解，会使WebMvcAutoConfiguration无法自动装配，使application.properties里的外部化配置无效
+@EnableWebMvc //使用该注解，会使WebMvcAutoConfiguration无法自动装配，使application.properties里的外部化配置无效
 public class WebMvcConfig implements WebMvcConfigurer {
 
 
@@ -49,14 +52,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(new HandlerInterceptor() {
+    registry.addInterceptor(new SyslogInterceptor());
+    registry.addInterceptor(new SyslogInterceptor2());
+    registry.addInterceptor(new SyslogInterceptor3());
+    /*registry.addInterceptor(new HandlerInterceptor() {
       @Override
       public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
           Object handler) throws Exception {
         System.out.println("拦截中");
         return true;
       }
-    });
+    });*/
   }
 
   @Bean
