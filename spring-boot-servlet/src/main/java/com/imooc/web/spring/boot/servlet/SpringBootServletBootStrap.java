@@ -26,8 +26,8 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * 解决方案：ServletContextInitializer
  */
 @EnableAutoConfiguration
-//@ServletComponentScan(basePackages = "com.imooc.web.spring.servlet")//spring boot 不完全支持@WebServlet @WebFilter  @WebListener,需要依赖ServletComponentScan
-//@ComponentScan(basePackages = "com.imooc.web.spring.servlet.controller")
+@ServletComponentScan(basePackages = "com.imooc.web.spring.servlet")//spring boot 不完全支持@WebServlet @WebFilter  @WebListener,需要依赖ServletComponentScan
+@ComponentScan(basePackages = "com.imooc.web.spring.servlet.controller")
 public class SpringBootServletBootStrap {
 
   public static void main(String[] args) {

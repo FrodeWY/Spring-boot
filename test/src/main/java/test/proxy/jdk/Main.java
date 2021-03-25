@@ -12,6 +12,10 @@ public class Main {
     String something = person.doSomething();
     System.out.println("结果:" + something);
     person.say();
+    System.out.println(man.getClass().getName());
   }
+
+
+
 
 }

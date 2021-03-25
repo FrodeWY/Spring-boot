@@ -14,6 +14,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 
 /**
@@ -102,6 +103,7 @@ public class ValueAnnotationBootstrap implements EnvironmentAware,BeanFactoryAwa
   public void setEnvironment(Environment environment) {
 //    this.environment=environment;
     if (this.environment != environment) {
+//      ((ConfigurableEnvironment)environment).setActiveProfiles();
       throw new IllegalStateException();
     }
   }

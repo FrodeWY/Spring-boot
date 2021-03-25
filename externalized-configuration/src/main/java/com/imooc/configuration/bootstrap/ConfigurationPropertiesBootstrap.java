@@ -34,14 +34,14 @@ public class ConfigurationPropertiesBootstrap {
         .web(WebApplicationType.NONE)
         .run(args);
 //    User3 user3 = context.getBean("user3",User3.class);
-    User2 user2 = context.getBean("user2", User2.class);
+//    User2 user2 = context.getBean("user2", User2.class);
     User3 user3 = context.getBean(User3.class);
-    System.out.println("用户对象2：" + user2);
+//    System.out.println("用户对象2：" + user2);
     System.out.println("用户对象3：" + user3);
     context.close();
   }
 
- /* @Bean
+/*  @Bean
   public User3 user3() {
     return new User3();
   }*/

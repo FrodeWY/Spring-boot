@@ -22,6 +22,7 @@ public class SpringApplicationBootstrap  {
     springApplication.setSources(Collections.singleton(SpringApplicationBootstrap.class.getName()));
     //运行阶段
     springApplication.run(args);
+
   }
 
 @SpringBootApplication
