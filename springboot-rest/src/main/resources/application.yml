@@ -1,0 +1,8 @@
+drp-websocket:
+  userDestinationPrefix: user
+  applicationDestinationPrefixes: app
+  endpointPaths: websocket
+
+server:
+  servlet:
+    context-path: /test

@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 
-@Configuration
+//@Configuration
 public class RestWebMvcConfigurer implements WebMvcConfigurer {
 
   @Autowired

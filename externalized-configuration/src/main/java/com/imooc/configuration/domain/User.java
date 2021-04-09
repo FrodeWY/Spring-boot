@@ -2,6 +2,8 @@ package com.imooc.configuration.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 
+import java.util.List;
+
 public class User {
 
   @Value("${user.id}")//propertySource有加载顺序，system.getProperty()的属性优先于application.properties文件中的属性
@@ -17,6 +19,16 @@ public class User {
   //@Value 添加默认值，如果外部化配置有user.desc则使用外部配置的user.desc，否则使用默认值
   @Value(value = "${user.desc:Hello world}")
   private String desc;
+  @Value(value = "${user.roles:role1,role2}")
+  private List<String> roles;
+
+  public List<String> getRoles() {
+    return roles;
+  }
+
+  public void setRoles(List<String> roles) {
+    this.roles = roles;
+  }
 
   public String getDesc() {
     return desc;
@@ -63,8 +75,11 @@ public class User {
   @Override
   public String toString() {
     return "User{" +
-        "id=" + id +
-        ", name='" + name + ", desc=" + desc + ", age=" + age + '\'' +
-        '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", age=" + age +
+            ", desc='" + desc + '\'' +
+            ", roles=" + roles +
+            '}';
   }
 }

@@ -34,10 +34,10 @@ public class ConfigurationPropertiesBootstrap {
         .web(WebApplicationType.NONE)
         .run(args);
 //    User3 user3 = context.getBean("user3",User3.class);
-//    User2 user2 = context.getBean("user2", User2.class);
-    User3 user3 = context.getBean(User3.class);
+    User2 user2 = context.getBean("user2", User2.class);
+//    User3 user3 = context.getBean(User3.class);
 //    System.out.println("用户对象2：" + user2);
-    System.out.println("用户对象3：" + user3);
+//    System.out.println("用户对象3：" + user3);
     context.close();
   }
 
@@ -50,7 +50,7 @@ public class ConfigurationPropertiesBootstrap {
   @ConfigurationProperties("user")//也可用于方法上进行属性绑定，但是这个bean就不能使用@EnableConfigurationProperties
   //当存在user.city.post-code属性并且值（havingValue）为555时才会创建这个bean，如果没有这个属性（matchIfMissing）则不创建,这里也支持松散绑定
   //如果使用prefix， prefix+name如果属性在application.properties里不支持松散匹配，必须完全匹配才可以，如果属性在环境变量中，支持松散匹配
-  @ConditionalOnProperty(name="user.city.post_code",havingValue = "555",matchIfMissing = false)
+//  @ConditionalOnProperty(name="user.city.post_code",havingValue = "555",matchIfMissing = false)
   public User2 user2() {
     return new User2();
   }
