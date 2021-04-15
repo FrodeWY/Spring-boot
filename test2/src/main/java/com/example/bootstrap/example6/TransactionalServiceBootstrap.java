@@ -29,10 +29,10 @@ import java.util.stream.Stream;
 @TransactionalService(value = "start")
 @ComponentScan(basePackages = "com.example.bootstrap.example6")
 @Configuration
-@Service(value = "twe")
+
 public class TransactionalServiceBootstrap {
     public static void main(String[] args) throws IOException {
-        test1();
+        test7();
     }
 
     private static void test1() throws IOException {

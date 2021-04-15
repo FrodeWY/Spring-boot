@@ -2,7 +2,7 @@ package com.example.bootstrap.example7;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class HttpServer implements Server {
     @Override
     public void start() {
