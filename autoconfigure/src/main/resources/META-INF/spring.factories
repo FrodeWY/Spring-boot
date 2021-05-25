@@ -1,2 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-springboot.autoconfigure.configuration.HelloWorldAutoConfiguration
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#springboot.autoconfigure.configuration.HelloWorldAutoConfiguration

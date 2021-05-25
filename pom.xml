@@ -20,7 +20,6 @@
     <module>spring-boot-servlet</module>
     <module>test</module>
     <module>spring-reactive</module>
-    <module>springboot-webflux</module>
     <module>externalized-configuration</module>
     <module>ioc</module>
 

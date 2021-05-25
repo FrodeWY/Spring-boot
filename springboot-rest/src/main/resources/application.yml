@@ -6,3 +6,4 @@ drp-websocket:
 server:
   servlet:
     context-path: /test
+

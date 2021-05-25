@@ -3,6 +3,8 @@ package com.imooc.web.servlet.support;
 import com.imooc.web.config.DispatcherServletConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
+
 
 /**
  * spring mvc 自动装配 默认实现
@@ -27,4 +29,6 @@ public class DefaultAnnotationConfigDispatcherServletInitializer extends
   protected String[] getServletMappings() {//mapping
     return new String[]{"/"};
   }
+
+
 }

@@ -30,6 +30,7 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor,Orde
     if (propertyValues.contains("name")) {
       propertyValues.addPropertyValue(new PropertyValue("name", "titi"));
     }
+    propertyValues.addPropertyValue("test",1);
   }
 
   @Override

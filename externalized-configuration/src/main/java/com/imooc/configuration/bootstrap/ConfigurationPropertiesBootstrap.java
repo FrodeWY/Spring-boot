@@ -23,7 +23,7 @@ import org.springframework.context.annotation.Bean;
  * 优先级配置
  * Java System Properties -Duser.city.post_code=0731
  * OS Environment Variables USER_CITY_POST_CODE=001
- * application.properties user.city.post-code=0571
+ * application.yml user.city.post-code=0571
  */
 public class ConfigurationPropertiesBootstrap {
 
